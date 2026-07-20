@@ -1,0 +1,74 @@
+[
+    {
+        "question": "What is the total number of customers in the database?",
+        "expected_tables": [
+            "customers"
+        ],
+        "gold_sql": "SELECT COUNT(*) AS total_customers FROM customers;"
+    },
+    {
+        "question": "Show me the names of all suppliers from Canada.",
+        "expected_tables": [
+            "suppliers"
+        ],
+        "gold_sql": "SELECT name FROM suppliers WHERE country = 'Canada';"
+    },
+    {
+        "question": "Find all customers who have not placed any orders.",
+        "expected_tables": [
+            "customers",
+            "orders"
+        ],
+        "gold_sql": "SELECT * FROM customers WHERE customer_id NOT IN (SELECT customer_id FROM orders);"
+    },
+    {
+        "question": "List all orders made by customer ID 123.",
+        "expected_tables": [
+            "orders",
+            "customers"
+        ],
+        "gold_sql": "SELECT * FROM orders WHERE customer_id = 123;"
+    },
+    {
+        "question": "List all customers who live in New York.",
+        "expected_tables": [
+            "customers"
+        ],
+        "gold_sql": "SELECT * FROM customers WHERE city = 'New York';"
+    },
+    {
+        "question": "Show me the names of all employees hired in 2022.",
+        "expected_tables": [
+            "employees"
+        ],
+        "gold_sql": "SELECT name FROM employees WHERE hire_date BETWEEN '2022-01-01' AND '2022-12-31';"
+    },
+    {
+        "question": "List all orders that were canceled.",
+        "expected_tables": [
+            "orders"
+        ],
+        "gold_sql": "SELECT * FROM orders WHERE status = 'canceled';"
+    },
+    {
+        "question": "How many suppliers are there in total?",
+        "expected_tables": [
+            "suppliers"
+        ],
+        "gold_sql": "SELECT COUNT(*) AS total_suppliers FROM suppliers;"
+    },
+    {
+        "question": "What is the total number of unique customers?",
+        "expected_tables": [
+            "customers"
+        ],
+        "gold_sql": "SELECT COUNT(DISTINCT customer_id) AS total_unique_customers FROM customers;"
+    },
+    {
+        "question": "What is the total number of products in the inventory?",
+        "expected_tables": [
+            "products"
+        ],
+        "gold_sql": "SELECT COUNT(*) AS total_products FROM products"
+    }
+]

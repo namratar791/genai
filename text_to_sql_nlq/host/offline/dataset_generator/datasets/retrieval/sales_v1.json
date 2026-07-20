@@ -1,0 +1,218 @@
+[
+    {
+        "question": "What is the total number of customers in the database?",
+        "expected_tables": [
+            "customers"
+        ]
+    },
+    {
+        "question": "List all products that have a price greater than 100.",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "How many orders were placed in the last month?",
+        "expected_tables": [
+            "orders"
+        ]
+    },
+    {
+        "question": "Which employees have a salary higher than 50000?",
+        "expected_tables": [
+            "employees"
+        ]
+    },
+    {
+        "question": "Show me the names of all suppliers from Canada.",
+        "expected_tables": [
+            "suppliers"
+        ]
+    },
+    {
+        "question": "What is the average rating of all products?",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "Find all customers who have not placed any orders.",
+        "expected_tables": [
+            "customers",
+            "orders"
+        ]
+    },
+    {
+        "question": "What are the top 5 selling products this year?",
+        "expected_tables": [
+            "top_selling_products_2023",
+            "sales_data_2023"
+        ]
+    },
+    {
+        "question": "List all orders made by customer ID 123.",
+        "expected_tables": [
+            "orders",
+            "customers"
+        ]
+    },
+    {
+        "question": "How many different categories of products are there?",
+        "expected_tables": []
+    },
+    {
+        "question": "What is the total revenue generated last quarter?",
+        "expected_tables": [
+            "revenue",
+            "sales"
+        ]
+    },
+    {
+        "question": "Which products are currently out of stock?",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "Show me the details of the last 10 orders.",
+        "expected_tables": [
+            "orders",
+            "order_details"
+        ]
+    },
+    {
+        "question": "What is the highest price of a product in the electronics category?",
+        "expected_tables": [
+            "electronics"
+        ]
+    },
+    {
+        "question": "List all customers who live in New York.",
+        "expected_tables": [
+            "customers"
+        ]
+    },
+    {
+        "question": "How many employees work in the sales department?",
+        "expected_tables": [
+            "employees",
+            "departments"
+        ]
+    },
+    {
+        "question": "What is the most common product category?",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "Find all orders that were shipped after January 1st, 2023.",
+        "expected_tables": [
+            "orders"
+        ]
+    },
+    {
+        "question": "What is the average order value for the last year?",
+        "expected_tables": [
+            "orders",
+            "order_items"
+        ]
+    },
+    {
+        "question": "List all products that have a discount applied.",
+        "expected_tables": [
+            "products",
+            "discounts"
+        ]
+    },
+    {
+        "question": "How many customers have a loyalty program membership?",
+        "expected_tables": [
+            "customers",
+            "loyalty_programs"
+        ]
+    },
+    {
+        "question": "What is the total number of items sold in the last week?",
+        "expected_tables": [
+            "sales",
+            "inventory"
+        ]
+    },
+    {
+        "question": "Show me the names of all employees hired in 2022.",
+        "expected_tables": [
+            "employees"
+        ]
+    },
+    {
+        "question": "What is the most expensive product in the store?",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "List all orders that were canceled.",
+        "expected_tables": [
+            "orders"
+        ]
+    },
+    {
+        "question": "How many products have a rating of 5 stars?",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "What is the total number of returns processed this month?",
+        "expected_tables": [
+            "returns",
+            "processing_dates"
+        ]
+    },
+    {
+        "question": "Find all customers who have spent more than 1000 dollars.",
+        "expected_tables": [
+            "customers",
+            "orders"
+        ]
+    },
+    {
+        "question": "What is the average time taken to fulfill an order?",
+        "expected_tables": [
+            "orders",
+            "order_fulfillment"
+        ]
+    },
+    {
+        "question": "List all products that were added in the last 30 days.",
+        "expected_tables": [
+            "products"
+        ]
+    },
+    {
+        "question": "How many suppliers are there in total?",
+        "expected_tables": [
+            "suppliers"
+        ]
+    },
+    {
+        "question": "What is the total number of unique customers?",
+        "expected_tables": [
+            "customers"
+        ]
+    },
+    {
+        "question": "Show me the details of the highest value order.",
+        "expected_tables": [
+            "orders",
+            "order_details"
+        ]
+    },
+    {
+        "question": "What is the total number of products in the inventory?",
+        "expected_tables": [
+            "products"
+        ]
+    }
+]
