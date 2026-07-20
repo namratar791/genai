@@ -1,0 +1,7 @@
+fastmcp==3.4.4
+mcp==1.28.1
+pinecone
+SQLAlchemy==2.0.36
+chromadb==1.5.9
+sentence-transformers
+python-dotenv
