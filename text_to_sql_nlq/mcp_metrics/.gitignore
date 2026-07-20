@@ -1,0 +1,11 @@
+# Cache files
+__pycache__/
+*.pyc
+.cache/
+cache/
+
+# Local DB files
+*nlq_app.db
+*.db
+*.sqlite
+*.sqlite3
