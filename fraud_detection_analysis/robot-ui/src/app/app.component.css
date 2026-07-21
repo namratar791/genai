@@ -1,0 +1,446 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    font-family: Inter, Arial, sans-serif;
+    color: #f3f4f6;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .page {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(58, 123, 213, 0.18), transparent 28%),
+      radial-gradient(circle at top right, rgba(138, 43, 226, 0.12), transparent 25%),
+      linear-gradient(180deg, #090b10 0%, #10141c 100%);
+    padding: 24px;
+  }
+  
+  .shell {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 20px;
+  }
+  
+  .sidebar,
+  .chat-panel {
+    background: rgba(17, 24, 39, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+  }
+  
+  .sidebar {
+    padding: 20px;
+  }
+  
+  .brand {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #1f2937, #111827);
+    font-size: 24px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .brand h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #e5e7eb;
+  }
+  
+  .brand p {
+    margin: 4px 0 0;
+    color: #9ca3af;
+    font-size: 13px;
+  }
+  
+  .panel h2 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #d1d5db;
+  }
+  
+  label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  
+  input {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 12px;
+    border: 1px solid #2b3545;
+    background: #0f172a;
+    color: #f8fafc;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #60a5fa;
+  }
+  
+  .checkbox-row {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  
+  .check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    font-size: 13px;
+  }
+  
+  .check input {
+    width: auto;
+  }
+  
+  .actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  
+  button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  button.primary {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+  }
+  
+  button.secondary {
+    background: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+  }
+  
+  button:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+  
+  .chat-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 82vh;
+  }
+  
+  .chat-header {
+    padding: 20px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .chat-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .chat-header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #9ca3af;
+  }
+  
+  .status-pill {
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #1f2937;
+    color: #cbd5e1;
+  }
+  
+  .status-pill.running {
+    background: rgba(16, 185, 129, 0.16);
+    color: #6ee7b7;
+  }
+  
+  .status-pill.done {
+    background: rgba(59, 130, 246, 0.16);
+    color: #93c5fd;
+  }
+  
+  .chat-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+  }
+  
+  .message,
+  .typing {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    background: #111827;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.03);
+  }
+  
+  .bubble {
+    max-width: 76%;
+    padding: 14px 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: #111827;
+  }
+  
+  .msg-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .title {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+  
+  .badge {
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    color: #cbd5e1;
+  }
+  
+  .msg-text {
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  
+  .meta {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  
+  /* Agent-specific robot colors */
+  .message.orchestrator .bubble {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(96, 165, 250, 0.28);
+    color: #dbeafe;
+  }
+  
+  .message.orchestrator .title {
+    color: #60a5fa;
+  }
+  
+  .message.behavior_agent .bubble {
+    background: rgba(124, 58, 237, 0.12);
+    border-color: rgba(167, 139, 250, 0.28);
+    color: #ede9fe;
+  }
+  
+  .message.behavior_agent .title {
+    color: #a78bfa;
+  }
+  
+  .message.location_agent .bubble {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(52, 211, 153, 0.28);
+    color: #d1fae5;
+  }
+  
+  .message.location_agent .title {
+    color: #34d399;
+  }
+  
+  .message.system .bubble {
+    background: rgba(148, 163, 184, 0.10);
+    border-color: rgba(148, 163, 184, 0.22);
+    color: #e2e8f0;
+  }
+  
+  .message.system .title {
+    color: #cbd5e1;
+  }
+  
+  /* Waiting */
+  .waiting-avatar {
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+  
+  .waiting-bubble {
+    background: rgba(255,255,255,0.04);
+    border-style: dashed;
+  }
+  
+  .dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  
+  .dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #94a3b8;
+    animation: blink 1.2s infinite ease-in-out;
+  }
+  
+  .dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes blink {
+    0%, 80%, 100% {
+      opacity: 0.25;
+      transform: translateY(0);
+    }
+    40% {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.85;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 980px) {
+    .shell {
+      grid-template-columns: 1fr;
+    }
+  
+    .bubble {
+      max-width: 100%;
+    }
+  }
+
+  .review-panel {
+    margin: 16px 22px;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #fde68a;
+  }
+  
+  .review-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .approve-btn,
+  .hold-btn,
+  .escalate-btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .approve-btn { background: #065f46; color: white; }
+  .hold-btn { background: #92400e; color: white; }
+  .escalate-btn { background: #991b1b; color: white; }
+
+  .message.merchant_agent .bubble {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(251, 191, 36, 0.28);
+    color: #fef3c7;
+  }
+  .message.merchant_agent .title {
+    color: #fbbf24;
+  }
+  
+  .message.device_agent .bubble {
+    background: rgba(236, 72, 153, 0.12);
+    border-color: rgba(244, 114, 182, 0.28);
+    color: #fce7f3;
+  }
+  .message.device_agent .title {
+    color: #f472b6;
+  }
+  
+  .message.vpn_agent .bubble {
+    background: rgba(14, 165, 233, 0.12);
+    border-color: rgba(56, 189, 248, 0.28);
+    color: #e0f2fe;
+  }
+  .message.vpn_agent .title {
+    color: #38bdf8;
+  }
+  
+  .message.merge_node .bubble,
+  .message.policy_node .bubble,
+  .message.confidence_node .bubble,
+  .message.action_node .bubble,
+  .message.guardrail_node .bubble,
+  .message.human_review .bubble {
+    background: rgba(148, 163, 184, 0.10);
+    border-color: rgba(148, 163, 184, 0.22);
+    color: #e2e8f0;
+  }
+  
+  .message.merge_node .title,
+  .message.policy_node .title,
+  .message.confidence_node .title,
+  .message.action_node .title,
+  .message.guardrail_node .title,
+  .message.human_review .title {
+    color: #cbd5e1;
+  }
